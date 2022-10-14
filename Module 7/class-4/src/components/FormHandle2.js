@@ -11,6 +11,17 @@ function FormHandle2(){
     const [zipcode, setZipcode] = React.useState('')
     const [hobby, setHobby] = React.useState('')
 
+    const handleSubmit=()=>{
+        console.log(name)
+        console.log(email)
+        console.log(gender)
+        console.log(dob)
+        console.log(phone)
+        console.log(address)
+        console.log(zipcode)
+        console.log(hobby)
+    }
+
     return (
         <form>
             <div>
@@ -23,15 +34,27 @@ function FormHandle2(){
             </div>
             <div>
                 <label>Gender : </label>
-                <input></input>
+                <div>
+                    <input type='radio' onChange={(e)=>setGender('Male')} name='gender'/>
+                    <label>Male</label>
+                </div>
+                <div>
+                    <input type='radio' onChange={(e)=>setGender('Female')} name='gender'/>
+                    <label>Female</label>
+                </div>
+                <div>
+                    <input type='radio' onChange={(e)=>setGender('Other')} name='gender'/>
+                    <label>Other</label>
+                </div>
+                
             </div>
             <div>
                 <label>Date Of Birth : </label>
-                <input type='text'  onChange={(e)=>setHobby(e.target.value)} value={hobby}></input>
+                <input type='date'  onChange={(e)=>setDob(e.target.value)} value={dob}></input>
             </div>
             <div>
                 <label>Phone No : </label>
-                <input type='phone' placeholder='Enter Phone No' onChange={(e)=>setPhone(e.target.value)} value={phone}></input>
+                <input type='number' placeholder='Enter Phone No' onChange={(e)=>setPhone(e.target.value)} value={phone}></input>
             </div>
             <div>
                 <label>Address : </label>
@@ -45,6 +68,7 @@ function FormHandle2(){
                 <label>Hobby : </label>
                 <input type='text' placeholder='Enter Hobby' onChange={(e)=>setHobby(e.target.value)} value={hobby}></input>
             </div>
+            <button onClick={handleSubmit()}>Submit</button>
         </form>
     )
 }
