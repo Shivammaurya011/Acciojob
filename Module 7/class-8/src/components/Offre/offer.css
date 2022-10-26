@@ -1,0 +1,22 @@
+.offer-container{
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 206, 189);
+    gap: 20px;
+    height: 300px;
+}
+.offer-container img:hover{
+    box-shadow: 3px 3px 3px 3px white;
+    cursor: pointer;
+}
+.footerwear-offer{
+
+}
+.wearable-offer{
+
+}
+.fashion-offer{
+
+}
